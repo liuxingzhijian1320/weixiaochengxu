@@ -1,0 +1,86 @@
+[
+  {
+    "categoryType": "PRINTING",
+    "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/073768e78ec6ee1f0107e075f9d91368.png",
+    "materialName": "人物",
+    "jointlyId": 41,
+    "price": 0,
+    "width": 4169,
+    "classificationType": "SYSTEM_SELF",
+    "id": 1171,
+    "dragize": true,
+    "height": 4169
+  },
+  {
+    "categoryType": "PRINTING",
+    "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/ec952c986fbc8f328d3d2ce8a718b799.png",
+    "materialName": "人物",
+    "jointlyId": 41,
+    "price": 0,
+    "width": 4169,
+    "classificationType": "SYSTEM_SELF",
+    "id": 1170,
+    "dragize": true,
+    "height": 4169
+  },
+  {
+    "categoryType": "PRINTING",
+    "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/a7ce42f330999b914f835504a1bb16ca.png",
+    "materialName": "人物",
+    "jointlyId": 41,
+    "price": 0,
+    "width": 4169,
+    "classificationType": "SYSTEM_SELF",
+    "id": 1169,
+    "dragize": true,
+    "height": 4169
+  },
+  {
+    "categoryType": "PRINTING",
+    "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/8c5a8bf6e6de89c7b44595d21705f17d.png",
+    "materialName": "大满贯",
+    "jointlyId": 41,
+    "price": 0,
+    "width": 8334,
+    "classificationType": "SYSTEM_SELF",
+    "id": 1164,
+    "dragize": true,
+    "height": 8334
+  },
+  {
+    "categoryType": "PRINTING",
+    "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/0fec4b1864b8341bb84d9216b2cc42df.png",
+    "materialName": "鸿运当头",
+    "jointlyId": 41,
+    "price": 0,
+    "width": 8334,
+    "classificationType": "SYSTEM_SELF",
+    "id": 725,
+    "dragize": true,
+    "height": 8334
+  },
+  {
+    "categoryType": "PRINTING",
+    "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/b615941fffd62e5d2888e72962cf2011.png",
+    "materialName": "乌鸦",
+    "jointlyId": 41,
+    "price": 0,
+    "width": 3334,
+    "classificationType": "SYSTEM_SELF",
+    "id": 598,
+    "dragize": true,
+    "height": 3334
+  },
+  {
+    "categoryType": "PRINTING",
+    "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/0c996a3f8aa43122e8b92a99b074f5ed.png",
+    "materialName": "骷髅头",
+    "jointlyId": 41,
+    "price": 0,
+    "width": 8334,
+    "classificationType": "SYSTEM_SELF",
+    "id": 597,
+    "dragize": true,
+    "height": 8334
+  }
+]

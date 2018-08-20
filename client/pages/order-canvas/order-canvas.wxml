@@ -1,0 +1,107 @@
+<!--pages/order.wxml-->
+<wxs module="moddle">
+  var getImage = function(index) {
+    switch (index) {
+      case 0:
+        return "正";
+      case 1:
+        return "反";
+      case 2:
+        return "左";
+      case 3:
+        return "右"
+    }
+  }
+  module.exports.getImage = getImage;
+</wxs>
+<view class="icons">
+  <image wx:for="{{images}}" class='icons_img' src='{{item.url}}?x-oss-process=image/resize,m_lfit,w_100' wx:key="index"></image>
+</view>
+<view class="cent">
+  <image src="{{imgUrl[imgIndex].url+'?x-oss-process=image/resize,m_lfit,w_500'}}" class="image" wx:if="{{imgUrl.length}}"></image>
+  <view class='btns'>
+    <text wx:for="{{imgUrl}}" class='{{imgIndex===index?"active":null}}' data-index="{{index}}" wx:key="{{index}}" bindtap='changeImg'>{{moddle.getImage(index)}}</text>
+  </view>
+  <canvas canvas-id="myCanvas" bindtap='movetap' class="port"/>
+</view>
+<view class="footer">
+  <view   hidden='{{flag!=="all"}}'>
+  <view class='icon clearfix'>
+    <view class="fl" bindtap='getsucaiList' data-info='sucai'>
+      <image src='./img/cixiu.png' mode="aspectFit"></image>
+      <text class="prop">素材</text>
+    </view>
+    <view class="fl" bindtap='getsucaiList' data-info='huizhang'>
+      <image src='./img/huizhang.png' mode="aspectFit"></image>
+      <text class="prop">徽章</text>
+    </view>
+    <view class="fl" bindtap='getsucaiList' data-info='lianming'>
+      <image src='./img/lianming.png' mode="aspectFit"></image>
+      <text class="prop">联名</text>
+    </view>
+    <view class="fl" bindtap='getsucaiList' data-info='fonts'>
+      <image src='./img/fonts.png' mode="aspectFit"></image>
+      <text class="prop">文字</text>
+    </view>
+    <view class="fl" bindtap='getsucaiList' data-info='shangchuan'>
+      <image src='./img/sucai.png' mode="aspectFit"></image>
+      <text class="prop">上传</text>
+    </view>
+  </view>
+  <view class='sure' bindtap='sure'>确定定制</view>
+  </view>
+  <view class='sucai' hidden='{{flag!=="sucai"}}'>
+    <view class='top'>
+      <image class="img" src='./img/header-logo.png'  mode="aspectFit"></image>
+      <text>印花</text>
+      <view bindtap='closetop' class="close fr"></view>
+    </view>
+    <scroll-view class='nav' scroll-x="{{true}}">
+      <view wx:for="{{sucaiList}}" class='navList {{sucaiListId===item.jointlyId?"active":""}}' wx:key="{{index}}" data-id="{{item.jointlyId}}" bindtap='getsucai' data-index="{{index}}">{{item.jointlyName}}</view>
+    </scroll-view>
+    <scroll-view class='list' scroll-left="{{scrollLeft}}" scroll-x="{{true}}" bindscrolltolower="load">
+      <view wx:for="{{sucai}}" class='navList' wx:key="{{index}}" data-id="{{item.jointlyId}}" data-url="{{item.imgUrl}}" data-index="{{index}}" bindtap='addImg'>
+        <image class="sucaiIcon" src='{{item.imgUrl}}?x-oss-process=image/resize,m_lfit,w_100'></image>
+        <text>{{item.materialName}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='sucai' hidden='{{flag!=="huizhang"}}'>
+    <view class='top'>
+      <image class="img" src='./img/header-logo.png'  mode="aspectFit"></image>
+      <text>徽章</text>
+      <view bindtap='closetop' class="close fr"></view>
+    </view>
+    <scroll-view class='nav' scroll-x="{{true}}">
+      <view wx:for="{{sucaiList}}" class='navList {{sucaiListId===item.jointlyId?"active":""}}' wx:key="{{index}}" data-id="{{item.jointlyId}}" bindtap='getsucai' data-index="{{index}}">{{item.jointlyName}}</view>
+    </scroll-view>
+    <scroll-view class='list' scroll-left="{{scrollLeft}}" scroll-x="{{true}}" bindscrolltolower="load">
+      <view wx:for="{{sucai}}" class='navList' wx:key="{{index}}" data-id="{{item.jointlyId}}" data-index="{{index}}" data-url="{{item.imgUrl}}"  bindtap='addImg'>
+        <image class="sucaiIcon" src='{{item.imgUrl}}?x-oss-process=image/resize,m_lfit,w_100'></image>
+        <text class='huizhang'>+{{item.price}}元</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='sucai' hidden='{{flag!=="lianming"}}'>
+    <view class='top'>
+      <image class="img" src='./img/header-logo.png'  mode="aspectFit"></image>
+      <text>联名</text>
+      <view bindtap='closetop' class="close fr"></view>
+    </view>
+    <scroll-view class='nav' scroll-x="{{true}}">
+      <view wx:for="{{sucaiList}}" class='navList {{sucaiListId===item.jointlyId?"active":""}}' wx:key="{{index}}" data-id="{{item.jointlyId}}" bindtap='getsucai' data-index="{{index}}">{{item.jointlyName}}</view>
+    </scroll-view>
+    <scroll-view class='list' scroll-left="{{scrollLeft}}" scroll-x="{{true}}" bindscrolltolower="load">
+      <view wx:for="{{sucai}}" class='navList' wx:key="{{index}}" data-id="{{item.jointlyId}}" data-index="{{index}}" data-url="{{item.imgUrl}}"  bindtap='addImg'>
+        <image class="sucaiIcon" src='{{item.imgUrl}}?x-oss-process=image/resize,m_lfit,w_100'></image>
+        <text>{{item.materialName}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='fonts' hidden='{{flag!=="fonts"}}'>
+    
+  </view>
+  <view class='shangchuan' hidden='{{flag!=="shangchuan"}}'>
+  
+  </view>
+</view>

@@ -1,0 +1,115 @@
+/* pages/home/home.wxss */
+
+.nav {
+  height: 100%;
+  width: 150rpx;
+  text-align: center;
+}
+
+.navList {
+  padding: 20rpx;
+}
+
+.nav .icon {
+  /* display: block; */
+  margin: 0 auto;
+  height: 80rpx;
+  width: 80rpx;
+  background-size: 80rpx 80rpx;
+  background-position: center;
+}
+.list {
+  width: 600rpx;
+  height: 100%;
+  background: #eee;
+}
+/* pages/home/images/moddle.wxss */
+ .made{
+  display: block;
+  width: 160rpx;
+  background-color: yellow;
+  line-height: 40rpx;
+  margin:0 auto;
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+}
+ .box {
+  width: 270rpx;
+  margin: 20rpx 0 0 20rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  background: #fff;
+  text-align: center;
+}
+ .listImg {
+  width: 230rpx;
+  height: 300rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+ .text {
+  text-align: center;
+  line-height: 30rpx;
+  /* margin: 0 20rpx; */
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+
+.popup {
+  position: fixed;
+  left: 60rpx;
+  top: 100rpx;
+  width: 630rpx;
+  z-index: 999;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 50rpx;
+}
+
+.swiper {
+  height: 480rpx;
+  text-align: center;
+}
+
+.swiper  image {
+  width: 100%;
+}
+
+.popup .prop {
+  border-bottom: 1px solid #ccc;
+}
+
+.popup .prop .text {
+  line-height: 30rpx;
+  padding: 20rpx;
+  display: inline-block;
+  margin-top: 20rpx;
+}
+
+.popup .prop view {
+  display: inline-block;
+  padding: 10rpx 30rpx;
+  margin: 0 10rpx;
+}
+
+.popup .prop .active {
+  background-color: yellow;
+}
+
+.btn {
+  margin: 10rpx auto;
+  width: 200rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 25rpx;
+  background-color: yellow;
+}

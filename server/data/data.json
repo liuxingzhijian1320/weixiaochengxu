@@ -1,0 +1,720 @@
+{
+  "cats": [
+    {
+      "section_icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/3c267a0df7b954bba46e9b40923aee8f.png",
+      "icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/0807291bfa6a925820169d550b636f12.png",
+      "name": "全部",
+      "id": 39,
+      "drowBoard": [
+        162,
+        140,
+        144,
+        147,
+        163,
+        136,
+        141,
+        145,
+        153,
+        138,
+        142,
+        155,
+        139,
+        143,
+        146
+      ],
+      "url": "https://wxapp.masteroctopus.cn/image/faman_t.png"
+    },
+    {
+      "section_icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/b9a4b4333181ebeabc1dd6ca61fd97f5.png",
+      "icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/f98dbbe1ee484ef372ea26ee4cfd75a4.png",
+      "name": "童装",
+      "id": 35,
+      "drowBoard": [
+        145,
+        153,
+        146
+      ],
+      "url": "https://wxapp.masteroctopus.cn/image/faman_t.png"
+    },
+    {
+      "section_icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/acf9795f2c18db212de5cc17eac76055.png",
+      "icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/3cd525c7077256c8fccecf27ea229b41.png",
+      "name": "T-恤",
+      "id": 8,
+      "drowBoard": [
+        139,
+        140,
+        147,
+        163,
+        136,
+        141,
+        145,
+        138
+      ],
+      "url": "https://wxapp.masteroctopus.cn/image/faman_t.png"
+    },
+    {
+      "section_icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/a10517e8e36e8db71f6143437b023c4e.png",
+      "icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/423e11d1b9dfc0e02f9811933294abd8.png",
+      "name": "Polo杉",
+      "id": 7,
+      "drowBoard": [
+        143,
+        144,
+        153,
+        142
+      ],
+      "url": "https://wxapp.masteroctopus.cn/image/faman_t.png"
+    },
+    {
+      "section_icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/f2c2c0289fc09e46732225c042173e79.png",
+      "icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/a503d9986ee568964502b2e77d087863.png",
+      "name": "围兜",
+      "id": 36,
+      "drowBoard": [
+        146
+      ],
+      "url": "https://wxapp.masteroctopus.cn/image/faman_t.png"
+    },
+    {
+      "section_icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/891bb18a9bb7c64f03fe08f04aa1aa37.png",
+      "icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/bf63105c3537cd9b53c17177757186e0.png",
+      "name": "帆布袋",
+      "id": 46,
+      "drowBoard": [
+        162
+      ],
+      "url": "https://wxapp.masteroctopus.cn/image/faman_t.png"
+    },
+    {
+      "section_icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/7b974c52cdb022b8f52ff66c95c6a4d5.png",
+      "icon": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/14ecd693f10d8682e26c837d81cb14e5.png",
+      "name": "抱枕",
+      "id": 44,
+      "drowBoard": [
+        155
+      ],
+      "url": "https://wxapp.masteroctopus.cn/image/faman_t.png"
+    }
+  ],
+  "drawBoards": {
+    "162": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/bbef2d9cd1c2550829fe1c6e62bf184c.jpg",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/9c18d38dab3950eea8a969f50d1d04fa.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "米白",
+              "id": 63
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "36*40",
+              "id": 65
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 29,
+      "name": "本色布袋",
+      "id": 162
+    },
+    "140": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/e428d59e943e6c942e0cacc06a377500.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/e428d59e943e6c942e0cacc06a377500.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/e9851ed8028fcfe367166ab31f121fea.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/3706700adfd122a63bbdfc2f64cf7c1f.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/1e10e5f6467730b6b8a567361e107705.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "白色",
+              "id": 33
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "S",
+              "id": 42
+            },
+            {
+              "name": "M",
+              "id": 43
+            },
+            {
+              "name": "L",
+              "id": 44
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 99,
+      "name": "男T恤 白",
+      "id": 140
+    },
+    "163": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/3c7af4399ac46c47806170c42edc483a.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/a2fc783e3a0a0fd52b1946e407847621.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/f0399f9fc936a88769144254c08f9aa5.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/5d953eb5bd63774ea156b4e114152957.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/ad3f28b5c507bee112471b9dfbd3c93f.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "白色",
+              "id": 33
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "均码",
+              "id": 47
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 99,
+      "name": "女T均码",
+      "id": 163
+    },
+    "141": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/81d4a8499dc3896ad92231a5dc82b66f.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/81d4a8499dc3896ad92231a5dc82b66f.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/5c761842117fefb25fd46030cccfc366.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/9cf3fc72f224a50624b7c7ff1f010944.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/3eeca0f228868406ba455430b45baa99.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "黑色",
+              "id": 2
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "S",
+              "id": 42
+            },
+            {
+              "name": "M",
+              "id": 43
+            },
+            {
+              "name": "L",
+              "id": 44
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 99,
+      "name": "男T恤 黑",
+      "id": 141
+    },
+    "153": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/cf62b1f2ae7ed7192781c3f26f3edc1b.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/1b59ed48cc2cf5c7190ad15fe627f497.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/8674aec3e7ff287e71650af6fed7f71a.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/e9ca177e7527d8d014b668b2783d6c02.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/5cc555b61afc872995d52158c7e02233.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "拼接色",
+              "id": 61
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "110",
+              "id": 53
+            },
+            {
+              "name": "120",
+              "id": 54
+            },
+            {
+              "name": "130",
+              "id": 55
+            },
+            {
+              "name": "140",
+              "id": 56
+            },
+            {
+              "name": "150",
+              "id": 57
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 118,
+      "name": "Polo杉童装",
+      "id": 153
+    },
+    "142": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/8ff73768c274a941d41d70070fa59f7e.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/6f77525fc7ecf42aaeab85fffea1bd76.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/b46a8549ecaa461ea8326bb9f05c6928.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/5bee37a0147b107d7ac73185cf224bdf.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/3992d7f19f415d717d8fb1afe34b7b05.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "灰色",
+              "id": 49
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "S",
+              "id": 42
+            },
+            {
+              "name": "M",
+              "id": 43
+            },
+            {
+              "name": "L",
+              "id": 44
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 128,
+      "name": "polo衫 灰",
+      "id": 142
+    },
+    "143": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/9c8cc182bd3ad5d67740bbd5af3847b4.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/9c8cc182bd3ad5d67740bbd5af3847b4.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/ba3ce6704789542ee203ad67ee1c1636.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/60a373f7fbd58f01e79705470881bcc6.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/7936d426c13791e5f38fdff21f6a1c6a.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "白色",
+              "id": 33
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "S",
+              "id": 42
+            },
+            {
+              "name": "M",
+              "id": 43
+            },
+            {
+              "name": "L",
+              "id": 44
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 128,
+      "name": "Polo杉 白",
+      "id": 143
+    },
+    "144": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/d97861464bbdbe03a6e099bc5a4b259c.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/d97861464bbdbe03a6e099bc5a4b259c.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/6e7ce7cba1a7d16a83ac88bcf5b8b84e.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/cca2505ab34e5ce23632d45e90260f45.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/954eee70567edd29b7da0b9cc7094ce0.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "黑色",
+              "id": 2
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "S",
+              "id": 42
+            },
+            {
+              "name": "M",
+              "id": 43
+            },
+            {
+              "name": "L",
+              "id": 44
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 128,
+      "name": "Polo杉 黑",
+      "id": 144
+    },
+    "155": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/3af5a5db84d6f295be12e026f473de3b.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/3af5a5db84d6f295be12e026f473de3b.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/ef0f677c732a7756e039000854697008.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "米白",
+              "id": 63
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "45x45cm",
+              "id": 64
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 39,
+      "name": "抱枕",
+      "id": 155
+    },
+    "145": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/9f0fa8831b45fa712ab6096203c1f137.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/9f0fa8831b45fa712ab6096203c1f137.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/553c3733596256e8a2917f1badfd2425.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/bd428250d1263d64cd4c595099159092.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/0684da4bb023d7b1658f93f3abdb7a7d.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "白色",
+              "id": 33
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "80",
+              "id": 50
+            },
+            {
+              "name": "90",
+              "id": 51
+            },
+            {
+              "name": "100",
+              "id": 52
+            },
+            {
+              "name": "110",
+              "id": 53
+            },
+            {
+              "name": "120",
+              "id": 54
+            },
+            {
+              "name": "130",
+              "id": 55
+            },
+            {
+              "name": "140",
+              "id": 56
+            },
+            {
+              "name": "150",
+              "id": 57
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 99,
+      "name": "童装",
+      "id": 145
+    },
+    "146": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/245f0d9eb570f0b029644e336600d1c0.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/245f0d9eb570f0b029644e336600d1c0.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "白色",
+              "id": 33
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "均码",
+              "id": 47
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 69,
+      "name": "围兜",
+      "id": 146
+    },
+    "147": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/598f934114933d9f3b616e9f0a7c3324.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/598f934114933d9f3b616e9f0a7c3324.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/545ae7fa438992e3cb572713986c8999.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/babba0cee99f612838b98b6024b4147c.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/fcbf6818189c1aca6955d78115f14a76.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "白色",
+              "id": 33
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "S",
+              "id": 42
+            },
+            {
+              "name": "M",
+              "id": 43
+            },
+            {
+              "name": "L",
+              "id": 44
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 99,
+      "name": "女T恤-白",
+      "id": 147
+    },
+    "136": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/09ce91cd4bafb1a07638a823773715a7.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/1d283e0d4067d21afd89676c441b06dc.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/42f2259619fa39808d5cc8fbefd8c12e.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/02ac230890cc987e43bb4c47ae69ff9c.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/48d13071907717cc5f03b0245841ccfb.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "灰色",
+              "id": 49
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "S",
+              "id": 42
+            },
+            {
+              "name": "M",
+              "id": 43
+            },
+            {
+              "name": "L",
+              "id": 44
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 99,
+      "name": "女T恤 灰",
+      "id": 136
+    },
+    "138": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/81d4a8499dc3896ad92231a5dc82b66f.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/1412c4067f0917f10f0e70dc4df80b97.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/13766c723623d52ea3d01c251c66ec47.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/ddf0800307048aa395574fa1b03c6b98.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/b08c0c543975326aba833b0b7f9c3b77.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "黑色",
+              "id": 2
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "S",
+              "id": 42
+            },
+            {
+              "name": "M",
+              "id": 43
+            },
+            {
+              "name": "L",
+              "id": 44
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 99,
+      "name": "女T恤 黑",
+      "id": 138
+    },
+    "139": {
+      "imgUrl": "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/0e291afc8127da7581d51a21c4b07d34.png",
+      "imgs": [
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/0e291afc8127da7581d51a21c4b07d34.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/74ce4b24fb8044560bba6791cbef2895.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/b7352d3dbf0cdf50208e8d377a5e7ad2.png",
+        "https://octopus-master.oss-cn-shenzhen.aliyuncs.com/sys/ca1b749f6f668788ac1abac42d760b5d.png"
+      ],
+      "size": [
+        {
+          "propNameId": 1,
+          "prop": [
+            {
+              "name": "灰色",
+              "id": 49
+            }
+          ],
+          "propName": "颜色"
+        },
+        {
+          "propNameId": 2,
+          "prop": [
+            {
+              "name": "S",
+              "id": 42
+            },
+            {
+              "name": "M",
+              "id": 43
+            },
+            {
+              "name": "L",
+              "id": 44
+            }
+          ],
+          "propName": "尺寸"
+        }
+      ],
+      "price": 99,
+      "name": "男T恤 灰",
+      "id": 139
+    }
+  }
+}

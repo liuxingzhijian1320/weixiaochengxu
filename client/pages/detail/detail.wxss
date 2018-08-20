@@ -1,0 +1,9 @@
+/* pages/detail/detail.wxss */
+.swiper{
+  height:700rpx;
+}
+.slide-image{
+  display: block;
+  margin: 0 auto;
+  height:700rpx;
+}

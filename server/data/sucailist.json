@@ -1,0 +1,88 @@
+{
+  "list": [
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 41,
+      "jointlyName": "涂鸦"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 42,
+      "jointlyName": "对话框"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 43,
+      "jointlyName": "宝宝"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 44,
+      "jointlyName": "情侣"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 46,
+      "jointlyName": "字母"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 48,
+      "jointlyName": "词语"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 49,
+      "jointlyName": "植物"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 50,
+      "jointlyName": "食物"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 55,
+      "jointlyName": "建筑"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 57,
+      "jointlyName": "黑色字母"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 58,
+      "jointlyName": "白色字母"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 59,
+      "jointlyName": "立体"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 60,
+      "jointlyName": "中文词汇"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 61,
+      "jointlyName": "个性图标"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 62,
+      "jointlyName": "生活"
+    },
+    {
+      "categoryType": "PRINTING",
+      "jointlyId": 63,
+      "jointlyName": "其他"
+    }
+  ],
+  "pageNo": 1,
+  "pageSize": 30,
+  "pageTotal": 1,
+  "total": 16
+}

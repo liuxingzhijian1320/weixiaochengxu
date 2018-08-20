@@ -1,0 +1,33 @@
+<!--pages/home/home.wxml-->
+<view class='container'>
+  <scroll-view scroll-y="{{true}}" class='nav fl'>
+    <view wx:for="{{nav}}" wx:for-index="index" data-index='{{item.id}}' class='navList' capture-catch:tap='click' wx:key="{{index}}">
+      <view class='icon' style="background-image:url('{{indx===item.id?item.section_icon+'?x-oss-process=image/resize,m_lfit,w_200':item.icon+'?x-oss-process=image/resize,m_lfit,w_200'}}')"></view>
+      <text>{{item.name}}</text>
+    </view>
+  </scroll-view>
+  <scroll-view scroll-y="{{true}}" class='list fl'>
+    <view wx:for="{{drawBoards}}" wx:key="{{index}}" style='transform: rotateX({{num}}deg);transition:{{index>=oldNum?"all 500ms ease":""}}' class="box fl">
+      <image src='{{item.imgUrl}}?x-oss-process=image/resize,m_lfit,w_160' lazy-load="{{true}}" class='listImg' mode='aspectFit'></image>
+      <text class='text'>{{item.name}}</text>
+      <text class='text'>￥ {{item.price}}</text>
+      <text size="mini" class='made' bindtap='show' data-id='{{item.id}}'>定制此款</text>
+    </view>
+  </scroll-view>
+  <view class='bg' hidden="{{!showPop}}" bindtap='hide' id="bg">
+    <view class='popup'>
+      <swiper class='swiper' indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="yellow" circular="{{true}}">
+        <block wx:for="{{data[id].imgs}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item}}?x-oss-process=image/resize,m_lfit,w_160" lazy-load="{{true}}" class="slide-image" mode='aspectFit' />
+          </swiper-item>
+        </block>
+      </swiper>
+      <view wx:for="{{data[id].size}}" wx:key="{{index}}" class='prop'>
+        <text class="text">{{item.propName}}:</text>
+        <view class="text" wx:for="{{item.prop}}" class="{{item.propNameId===1?(color_id===scope.id?'active':null):(size_id===scope.id?'active':null)}}" data-propid="{{item.propNameId}}" wx:for-item="scope" wx:key="scope.id" data-id='{{scope.id}}' bindtap='propch'>{{scope.name}}</view>
+      </view>
+      <view class='btn' bindtap='order'>确定</view>
+    </view>
+  </view>
+</view>

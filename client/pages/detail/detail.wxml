@@ -1,0 +1,8 @@
+<!--pages/detail/detail.wxml-->
+<swiper class='swiper' indicator-dots indicator-color="#ccc" autoplay indicator-active-color="yellow">
+  <block wx:for="{{orderInfo.props}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item.bgUrl}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
