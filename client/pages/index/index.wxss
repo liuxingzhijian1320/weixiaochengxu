@@ -1,14 +1,12 @@
 /* pages/index/index.wxss */
 .aaa{
   position: fixed;
+  background:#fa0 url("https://l0vwp10g.qcloud.la/friendsbgs.png") no-repeat center bottom;
+  background-size: 750rpx;
   top: 0;
   left:0;
   height: 100%;
   width:100%;
-  display:flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items:center;
 }
 .bg{
   position: fixed;
@@ -19,15 +17,24 @@
 }
 .switch{
   width:70%;
-  height:50px;
-  background-color: #f40;
-  border-radius: 25px;
+  height:100rpx;
+  background-color: #eee;
+  border-radius: 50rpx;
+  text-align: center;
+  margin: 300rpx auto 100rpx;
+}
+.switch text{
+  line-height: 100rpx;
+  display: block;
+  height:100rpx;
+  font-size: 30rpx;
 }
 .switch1{
-  width:50px;
-  height:50px;
-  background-color: #eee;
-  border-radius: 25px;
+  width:100rpx;
+  height:100rpx;
+  background: #fc0 url("https://l0vwp10g.qcloud.la/row.png") no-repeat center;
+  background-size:50rpx; 
+  border-radius: 50rpx;
   z-index: 3
 }
 .center{
@@ -35,5 +42,31 @@
   text-align: center;
   font-size: 30rpx;
   color:yellow;
+  width: 50%;
+  margin: 0 auto;
   border: 1rpx solid yellow;
+}
+.model{
+  position: fixed;
+  width:500rpx;
+  top:35%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  font-size: 30rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  z-index: 999;
+}
+.model .title{
+  line-height: 100rpx;
+  text-align: center;
+}
+.model .message{
+  padding:0 30rpx;
+  color:#999;
+  line-height: 60rpx;
+}
+.model .btn{
+  background: #f90;
+  border-radius: 0;
 }

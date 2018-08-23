@@ -4,14 +4,14 @@
 	"miniprogramRoot": "./client",
 	"qcloudRoot": "./server",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
-	"appid": "wx7bfa06a3597da01d",
-	"projectname": "%E9%A2%A8%E9%9B%B2%E5%B0%8F%E5%B1%8B",
+	"appid": "wxfda87a89c770c9c8",
+	"projectname": "JetmanDesign",
 	"compileType": "miniprogram",
 	"condition": {}
 }

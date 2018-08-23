@@ -1,0 +1,37 @@
+<!--pages/confirm/confirm.wxml-->
+<view class='confirm'>
+  <view class='title'>
+    <image src='https://lg-j2pfsko2-1257172761.cos.ap-shanghai.myqcloud.com/header-logo.png' mode='aspectFit'></image>
+    <text>确认支付</text>
+  </view>
+  <view class='address clearfix' hidden='{{address===null}}'>
+    <view class='left fl'>
+      收货地址
+    </view>
+    <view class='right fl'>
+      <text class='userName'>收货人：{{address.userName}}</text>
+      <text class='tel'>电话：{{address.telNumber}}</text>
+      <text class='ads' title="{{address.address}}">收货地址：{{address.address}}</text>
+      <text class='code'>邮编：{{address.nationalCode}}</text>
+    </view>
+  </view>
+  <view class='address' hidden='{{address!==null}}'>
+    <button class="btn" size='mini' catchtap='getAddress'>请选择收货地址</button>
+  </view>
+  <image class="ad" src="https://lg-j2pfsko2-1257172761.cos.ap-shanghai.myqcloud.com/give1.png" mode='aspectFit'></image>
+  <view class='prop'>
+    <view class='list'>优惠券</view>
+    <view class='list'>包装方式</view>
+    <view class='list'>配送方式</view>
+  </view>
+  <view class='footer'>
+    <view class='money fl'>合计金额：</view>
+    <view class="btn fl" catchtap='confirm'>去支付</view>
+  </view>
+  <view class='moddel' wx:if="{{flag}}">
+    <view class='title1'>温馨提示</view>
+    <view class='message'>请打开通讯地址授权</view>
+    <button class="btn" size='mini' open-type='openSetting'>确定</button>
+  </view>
+  <view class='box'  wx:if="{{flag}}"></view>
+</view>

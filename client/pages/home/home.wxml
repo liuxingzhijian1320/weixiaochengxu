@@ -1,8 +1,8 @@
 <!--pages/home/home.wxml-->
 <view class='container'>
   <scroll-view scroll-y="{{true}}" class='nav fl'>
-    <view wx:for="{{nav}}" wx:for-index="index" data-index='{{item.id}}' class='navList' capture-catch:tap='click' wx:key="{{index}}">
-      <view class='icon' style="background-image:url('{{indx===item.id?item.section_icon+'?x-oss-process=image/resize,m_lfit,w_200':item.icon+'?x-oss-process=image/resize,m_lfit,w_200'}}')"></view>
+    <view wx:for="{{nav}}" wx:for-index="index" data-index='{{index}}' class='navList' capture-catch:tap='click' wx:key="{{index}}">
+      <view class='icon' style="background-image:url('{{indx===index?item.section_icon+'?x-oss-process=image/resize,m_lfit,w_200':item.icon+'?x-oss-process=image/resize,m_lfit,w_200'}}')"></view>
       <text>{{item.name}}</text>
     </view>
   </scroll-view>
@@ -25,7 +25,9 @@
       </swiper>
       <view wx:for="{{data[id].size}}" wx:key="{{index}}" class='prop'>
         <text class="text">{{item.propName}}:</text>
-        <view class="text" wx:for="{{item.prop}}" class="{{item.propNameId===1?(color_id===scope.id?'active':null):(size_id===scope.id?'active':null)}}" data-propid="{{item.propNameId}}" wx:for-item="scope" wx:key="scope.id" data-id='{{scope.id}}' bindtap='propch'>{{scope.name}}</view>
+        <view class='right'>
+          <view class="text" wx:for="{{item.prop}}" class="{{item.propNameId===1?(color_id===scope.id?'active':null):(size_id===scope.id?'active':null)}}" data-propid="{{item.propNameId}}" wx:for-item="scope" wx:key="scope.id" data-id='{{scope.id}}' bindtap='propch'>{{scope.name}}</view>
+        </view>
       </view>
       <view class='btn' bindtap='order'>确定</view>
     </view>

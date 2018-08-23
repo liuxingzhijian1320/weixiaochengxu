@@ -52,26 +52,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    wx.showLoading({
-      title: "请求资源中...",
-      mask: true,
-    })
-    wx.request({
-      url: config.service.getDataUrl,
-      success: (res) => {
-        let obj = res.data.data.drawBoards,
+    wx.getStorage({
+      key: 'data',
+      success:  (res)=> { 
+        console.log(res)
+        let obj = res.data.drawBoards,
           drawBoards = [],
           num = 0;
-        console.log(res.data.data)
         for (let key in obj) {
           num++;
           drawBoards.push(obj[key])
         }
         this.setData({
-          nav: res.data.data.cats,
+          nav: res.data.cats,
           drawBoards: drawBoards,
-          indx: res.data.data.cats[0].id,
-          data: res.data.data.drawBoards,
+          data: res.data.drawBoards,
           newNum: num
         })
         setTimeout(() => {
@@ -80,16 +75,51 @@ Page({
           })
         })
         wx.hideLoading()
+      },
+      fail:()=>{
+          wx.showLoading({
+            title: "请求资源中...",
+            mask: true,
+          })
+        wx.ajax({
+            url: config.service.getDataUrl,
+            success: (res) => {
+              let obj = res.data.drawBoards,
+                drawBoards = [],
+                num = 0;
+              wx.setStorage({
+                key: 'data',
+                data: res.data,
+              })
+              for (let key in obj) {
+                num++;
+                drawBoards.push(obj[key])
+              }
+              this.setData({
+                nav: res.data.cats,
+                drawBoards: drawBoards,
+                data: res.data.drawBoards,
+                newNum: num
+              })
+              setTimeout(() => {
+                this.setData({
+                  num: 0
+                })
+              })
+              wx.hideLoading()
+            }
+          })
       }
     })
     
+    
   },
   click(e) {
-    let obj = app.globalData.data.drawBoards,
+    let obj = this.data.data,
       drawBoards = [];
-    let arr = app.globalData.data.cats[e.currentTarget.dataset.index].drowBoard.sort()
-    for (let i = 0; i < arr.length; i++) {
-      drawBoards.push(obj[arr[i]])
+    let arr = this.data.nav[e.currentTarget.dataset.index].drowBoard
+    for (let e in arr) {
+      drawBoards.push(obj[arr[e]])
     }
     this.setData({
       indx: e.currentTarget.dataset.index,
@@ -120,7 +150,7 @@ Page({
   },
   order(e) {
     wx.navigateTo({
-      url: '/pages/order/order?id=' + this.data.id + '&color=' + this.data.color_id + '&size=' + this.data.size_id+'&catId='+this.data.indx,
+      url: '/pages/template/template?id=' + this.data.id + '&color=' + this.data.color_id + '&size=' + this.data.size_id+'&catId='+this.data.indx,
     })
   }
 })

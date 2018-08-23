@@ -1,7 +1,12 @@
-<image src='./index.png' class='bg'></image>
 <view class='aaa'>
   <movable-area class="switch">
+  <text>马上定制</text>
       <movable-view  class="switch1" x="{{num}}" inertia="true" bindtouchend='bindchange' friction="100" direction="horizontal"></movable-view> 
   </movable-area>
   <view class="center" catchtap='goToCenter'>进入个人中心</view>
+  <view class='model' wx:if="{{!flag}}">
+    <view class='title'>温馨提示</view>
+    <view class='message'>为了让您更好的体验，我们需要获取您的用户信息</view>
+    <button open-type='getUserInfo' bindgetuserinfo='getUserInfo' class='btn'>开启定制之旅</button> 
+  </view>
 </view>

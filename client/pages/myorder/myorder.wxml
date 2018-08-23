@@ -1,0 +1,22 @@
+<!--pages/order/order.wxml-->
+<view class='box'>
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="https://lg-j2pfsko2-1257172761.cos.ap-shanghai.myqcloud.com/avatar.png" background-size="cover"></image>
+    <text class="userinfo-nickname">我的订单</text>
+    <view class="radious"></view>
+  </view>
+  <view class="separate"></view>
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="tabNav">我的定制</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="tabNav">我送出的</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="tabNav">我收到的</view>
+  </view>
+  <swiper current="{{currentTab}}" duration="1000"  >
+      <swiper-item><view class="item-cont">暂无相关数据</view></swiper-item>
+      <swiper-item><view class="item-cont">暂无相关数据</view></swiper-item>
+      <swiper-item><view class="item-cont">暂无相关数据</view></swiper-item>
+  </swiper>
+  <view class='bottom'>
+    <button class='bottom-btn'>章鱼大师</button>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+<view class='user-box'>
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.userinfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.userinfo.nickName}}</text>
+    <view class="radious"></view>
+  </view>
+  <view class="separate"></view>
+  <view class="navs">
+    <block wx:for-items="{{orderItems}}" wx:key="name">
+      <view class="nav-item" catchtap="toOrder" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+        <image src="{{item.imageurl}}" class="nav-image" />
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="separate line-gray"></view>
+  <view class="person-list">
+    <view class="list-item">
+      <image class="item-image" src="https://lg-j2pfsko2-1257172761.cos.ap-shanghai.myqcloud.com/invitation.png"></image>
+      <text class="item-text">邀请好友</text>
+      <text class='font-style font1'>成功邀请可获优惠券</text>
+    </view>
+    <view class="person-line"></view>
+    <view class="list-item">
+      <image class="item-image" src="https://lg-j2pfsko2-1257172761.cos.ap-shanghai.myqcloud.com/sum.png"></image>
+      <text class="item-text">余额</text>
+      <text class='item-money'>0 元</text>
+    </view>
+    <view class="person-line"></view>
+    <view class="list-item" catchtap="toTemplate">
+      <image class="item-image" src="https://lg-j2pfsko2-1257172761.cos.ap-shanghai.myqcloud.com/template.png"></image>
+      <text class="item-text">我的模板</text>
+    </view>
+    <view class="person-line"></view>
+    <view class="list-item">
+      <image class="item-image" src="https://lg-j2pfsko2-1257172761.cos.ap-shanghai.myqcloud.com/help.png"></image>
+      <text class="item-text">帮助中心</text>
+      <text class='font-style' bindtap='calling'>客服电话：133xxxxxxxx</text>
+    </view>
+    <view class="person-line"></view>
+  </view>
+  <view class="separate bottom1"></view>
+  <view class='bottom'>
+    <button class='bottom-btn'>马上定制</button>
+  </view>
+</view>

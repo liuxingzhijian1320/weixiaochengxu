@@ -1,9 +1,149 @@
 /* pages/detail/detail.wxss */
 .swiper{
-  height:700rpx;
+  height:600rpx;
 }
 .slide-image{
   display: block;
   margin: 0 auto;
-  height:700rpx;
+  height:600rpx;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center
+}
+.footer .money{
+  background: #000;
+  height: 100rpx;
+  color:#fff;
+  width:450rpx;
+  
+}
+.footer .btn{
+  background: yellow;
+  width:300rpx;
+}
+.content{
+  padding-top: 10rpx;
+  background: #eee;
+}
+.title{
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 80rpx;
+  background: url('https://lg-j2pfsko2-1257172761.cos.ap-shanghai.myqcloud.com/header-logo.png') no-repeat 20rpx center;
+  background-size: 50rpx;
+}
+.list,.title{
+  background-color: #fff;
+  border-bottom: 1rpx solid #ccc;
+}
+.list .left{
+  width:200rpx;
+  height:200rpx;
+  padding: 25rpx 0;
+}
+.list .left image{
+  width:200rpx;
+  height:200rpx;
+}
+.list .center{
+  width:550rpx;
+  height:250rpx;
+
+}
+.list .name{
+  line-height: 50rpx;
+  font-size: 30rpx;
+}
+.list .prop{
+  width: 350rpx;
+  height: 50rpx;
+  background: #eee;
+  font-size: 24rpx;
+  margin-top: 15rpx;
+  line-height: 50rpx;
+}
+.list .price{
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+.list .num{
+  width:184rpx;
+  margin:10rpx 20rpx;
+  height:40rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  border:1rpx solid #eee;
+  line-height: 40rpx;
+  text-align: center;
+}
+.list .num .btn{
+  width:40rpx;
+  height:40rpx;
+}
+.list .num .text{
+width:100rpx;
+height:40rpx;
+box-sizing: border-box;
+border-left: 1px solid #eee;
+border-right: 1px solid #eee;
+}
+.add{
+  background: #fff;
+}
+.add .num{
+  width:150rpx;
+  height:50rpx;
+  margin: 25rpx;
+  font-size: 24rpx;
+}
+.add .num .btn,.add .num .text{
+  width: 50rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+.add .num .btn{
+   background: #f90
+}
+.add .title1{
+  font-size: 30rpx;
+  padding: 25rpx;
+}
+.detail{
+  margin-top: 10rpx;
+  background: #fff;
+  padding-bottom: 108rpx;
+}
+.detail .title2{
+  padding: 25rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.detail .money{
+  padding: 25rpx 50rpx;
+  font-size: 30rpx;
+  text-align: right
+}
+.detail_list{
+  height:80rpx;
+  line-height: 80rpx;
+  padding:10rpx 25rpx;
+  font-size: 30rpx;
+}
+.img{
+  width:50rpx;
+  height:50rpx;
+  vertical-align: middle;
+  margin: 0 20rpx;
+}
+.detail_list .text{
+  display: inline-block;
+  text-align: right;
+  width: 300rpx
 }

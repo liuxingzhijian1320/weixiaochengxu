@@ -1,0 +1,111 @@
+/* pages/giftCard/giftCard.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.userinfo {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    background: #FFD101;   
+    width: 100%; 
+    height: 315rpx;
+    overflow: hidden;
+}
+.radious{
+  border-top-right-radius:50%;
+  border-top-left-radius:50%;
+  padding-top:264rpx;
+  margin-top:-222rpx;
+  background-color:white;
+  height: 216rpx;
+}
+.userinfo-nickname {  
+    color: black;
+}
+.input-box{
+  width: 100%;
+  padding-top: 25rpx;
+  padding-left:20rpx;
+  padding-right: 20rpx;
+}
+.input1{
+  font-size: 24rpx;
+  width: 73%;
+  float: left;
+  background-color: white;
+  padding-left: 30rpx;
+  height:70rpx;
+  padding-top:10rpx;
+}
+.btn1{
+  width: 18%;
+  background-color: #555555;
+  color: white;
+  float: right;
+  font-size: 22rpx;
+  border-radius:0rpx;
+  margin-right:35rpx;
+  padding:0rpx;
+  height:80rpx;
+  padding-top:12rpx;
+}
+.box{
+  width: 100%;
+  background-color: #F0F0F0;
+  /* padding-bottom: 1000rpx; */
+  height: 100vh;
+}
+.userinfo-avatar {  
+    width: 108rpx;  
+    height: 108rpx;  
+    margin: auto;  
+    border-radius: 50%;
+    flex-direction:column;
+    border: 4rpx solid gray;
+    position: fixed;
+    top: 43rpx;
+}
+.userinfo-nickname {  
+    color: black;
+    position: fixed;
+    top: 160rpx;
+    font-size: 24rpx;
+}
+.userinfo{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  overflow: hidden;
+}
+.radious{
+  padding-top:575rpx;
+  width:120%;
+  height:100rpx;
+  border-top-right-radius:50%;
+  border-top-left-radius:50%;
+  margin-top:107rpx;
+}
+.mess{
+  padding: 200rpx 100rpx 0rpx 100rpx;
+  text-align: center;
+}
+.mess-text{
+  font-size: 28rpx;
+  color: gray;
+}
+.bottom{
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+}
+.bottom-btn{
+  background-color: #FFD101;
+  font-size: 36rpx;
+  border-radius: 0;
+}

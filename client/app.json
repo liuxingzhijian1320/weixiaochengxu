@@ -2,18 +2,22 @@
   "pages": [
     "pages/index/index",
     "pages/home/home",
-    "pages/user/index",
-    "pages/addCgi/addCgi",
     "pages/order/order",
-    "pages/order-canvas/order-canvas",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/confirm/confirm",
+    "pages/user/user",
+    "pages/coupon/coupon",
+    "pages/giftCard/giftCard",
+    "pages/myorder/myorder",
+    "pages/template/template",
+    "pages/mytemplate/mytemplate"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#9DF",
+    "navigationBarBackgroundColor": "#fa0",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "風雲小屋",
+    "navigationBarTitleText": "JetmanDesign",
     "onReachBottomDistance": 50
   }
 }

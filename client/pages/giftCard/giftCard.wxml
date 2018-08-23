@@ -1,0 +1,19 @@
+<!--pages/giftCard/giftCard.wxml-->
+<view class='box'>
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="https://lg-j2pfsko2-1257172761.cos.ap-shanghai.myqcloud.com/avatar.png" background-size="cover"></image>
+    <text class="userinfo-nickname">礼品卡</text>
+    <view class="radious"></view>
+  </view>
+  <view class="separate"></view>
+  <view class='input-box'>
+    <input class='input1' placeholder='输入兑换码'></input>
+    <button class='btn1'>兑换礼品卡</button>
+  </view>
+  <view class='mess'>
+    <text class='mess-text'>暂未有礼品卡~</text>
+  </view>
+  <view class='bottom'>
+    <button class='bottom-btn'>章鱼大师</button>
+  </view>
+</view>

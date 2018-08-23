@@ -3,7 +3,7 @@
  */
 
 // 此处主机域名修改成腾讯云解决方案分配的域名
-var host = 'https://l0vwp10g.qcloud.la';
+var host = 'http://172.28.228.146:8080';
 
 var config = {
 
@@ -23,13 +23,13 @@ var config = {
     // 上传图片接口
     uploadUrl: `${host}/weapp/upload`,
     // 获取数据接口
-    getDataUrl: `${host}/weapp/data`,
+    getDataUrl: `${host}/api/v1/data`,
     // 获取数据接口
-    getSucaiListUrl: `${host}/weapp/sucailist`,
+    getSucaiListUrl: `${host}/api/v1/sucai_type`,
     // 获取数据接口
-    getSucaiUrl: `${host}/weapp/sucai`,
-    getFontsUrl: `${host}/weapp/fonts`,
-    getDetailUrl: `${host}/weapp/detail`,
+    getSucaiUrl: `${host}/api/v1/sucai_list`,
+    getFontsUrl: `${host}/api/v1/fonts`,
+    getDetailUrl: `${host}/api/v1/img_detail`,
     createOrderUrl: `${host}/weapp/createOrder`,
     getOrderDetail: `${host}/weapp/order`,
   }
