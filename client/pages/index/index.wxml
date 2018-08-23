@@ -1,6 +1,7 @@
 <image src='./index.png' class='bg'></image>
 <view class='aaa'>
   <movable-area class="switch">
+  <text>马上定制</text>
       <movable-view  class="switch1" x="{{num}}" inertia="true" bindtouchend='bindchange' friction="100" direction="horizontal"></movable-view> 
   </movable-area>
   <view class="center" catchtap='goToCenter'>进入个人中心</view>

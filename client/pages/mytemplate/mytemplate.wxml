@@ -1,0 +1,16 @@
+<!--pages/service/service.wxml-->
+<view class='box'>
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="https://lg-j2pfsko2-1257172761.cos.ap-shanghai.myqcloud.com/avatar.png" background-size="cover"></image>
+    <text class="userinfo-nickname">我的模板</text>
+    <view class="radious"></view>
+  </view>
+  <view class="separate"></view>
+  <view class='cont-box'>
+    <text>暂无模板数据</text>
+  </view>
+  <view class='bottom'>
+    <button class='bottom-btn'>章鱼大师</button>
+  </view>
+</view>
+

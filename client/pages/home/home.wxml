@@ -25,7 +25,9 @@
       </swiper>
       <view wx:for="{{data[id].size}}" wx:key="{{index}}" class='prop'>
         <text class="text">{{item.propName}}:</text>
-        <view class="text" wx:for="{{item.prop}}" class="{{item.propNameId===1?(color_id===scope.id?'active':null):(size_id===scope.id?'active':null)}}" data-propid="{{item.propNameId}}" wx:for-item="scope" wx:key="scope.id" data-id='{{scope.id}}' bindtap='propch'>{{scope.name}}</view>
+        <view class='right'>
+          <view class="text" wx:for="{{item.prop}}" class="{{item.propNameId===1?(color_id===scope.id?'active':null):(size_id===scope.id?'active':null)}}" data-propid="{{item.propNameId}}" wx:for-item="scope" wx:key="scope.id" data-id='{{scope.id}}' bindtap='propch'>{{scope.name}}</view>
+        </view>
       </view>
       <view class='btn' bindtap='order'>确定</view>
     </view>

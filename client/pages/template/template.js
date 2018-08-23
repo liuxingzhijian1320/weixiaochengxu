@@ -40,17 +40,17 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     this.setData({
       p: wx.getSystemInfoSync().windowWidth / 750
     })
     if (options.template_id) {
-      wx.request({
+      wx.ajax({
         url: config.service.getOrderDetail + "?id=" + options.template_id,
         success: (res) => {
           console.log(res)
           // e.left = parseInt(e.left * 2 * p);
-          var arr = JSON.parse(res.data.data[0].props).map((e, i) => {
+          var arr = JSON.parse(res.data[0].props).map((e, i) => {
             var p = e.width / 500;
             e.props = e.props.map((e, i) => {
               // console.log(e,i)
@@ -65,10 +65,10 @@ Page({
             return e
           })
           this.data.query = {
-            id: res.data.data[0].drawBoardid,
-            color: JSON.parse(res.data.data[0].propid).color_id,
-            size: JSON.parse(res.data.data[0].propid).size_id,
-            catId: res.data.data[0].catId,
+            id: res.data[0].drawBoardid,
+            color: JSON.parse(res.data[0].propid).color_id,
+            size: JSON.parse(res.data[0].propid).size_id,
+            catId: res.data[0].catId,
             template_id: options.template_id
           }
           this.setData({
@@ -79,12 +79,12 @@ Page({
       })
     } else {
       this.data.query = options;
-      wx.request({
+      wx.ajax({
         url: config.service.getDetailUrl + "?id=" + options.id,
         success: (res) => {
           console.log(res)
           this.setData({
-            imgUrl: res.data.data.map((e, i) => {
+            imgUrl: res.data.map((e, i) => {
               e.props = []
               return e
             })
@@ -97,49 +97,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   },
   changeImg(e) {
@@ -167,14 +167,14 @@ Page({
         categoryType = "JOINTLY";
         break;
       case "fonts":
-        wx.request({
+        wx.ajax({
           url: config.service.getFontsUrl,
           success: (res) => {
             console.log(res)
             this.setData({
-              fonts: res.data.data,
-              color: res.data.data.color[0],
-              fontId: res.data.data.font[0].id
+              fonts: res.data,
+              color: res.data.color[0],
+              fontId: res.data.font[0].id
             })
           }
         })
@@ -186,20 +186,20 @@ Page({
       title: "请求资源中...",
       mask: true,
     })
-    wx.request({
+    wx.ajax({
       url: config.service.getSucaiListUrl + "?categoryType=" + categoryType + "&pageNumber=1&pageSize=100",
       success: (res) => {
         console.log(res)
         this.setData({
-          sucaiList: res.data.data,
-          sucaiListId: res.data.data[0].jointlyId
+          sucaiList: res.data,
+          sucaiListId: res.data[0].jointlyId
         })
-        wx.request({
-          url: config.service.getSucaiUrl + "?jointlyId=" + res.data.data[0].jointlyId + "&pageNumber=1&pageSize=6",
+        wx.ajax({
+          url: config.service.getSucaiUrl + "?jointlyId=" + res.data[0].jointlyId + "&pageNumber=1&pageSize=6",
           success: (res) => {
             console.log(res)
             this.setData({
-              sucai: res.data.data,
+              sucai: res.data,
             })
             wx.hideLoading()
           },
@@ -225,11 +225,11 @@ Page({
     wx.showLoading({
       title: "请求资源中..."
     })
-    wx.request({
+    wx.ajax({
       url: config.service.getSucaiUrl + "?jointlyId=" + this.data.sucaiListId + "&pageNumber=1&pageSize=6",
       success: (res) => {
         this.setData({
-          sucai: res.data.data,
+          sucai: res.data,
         });
         wx.hideLoading()
       }
@@ -243,11 +243,11 @@ Page({
     wx.showLoading({
       title: "请求资源中..."
     })
-    wx.request({
+    wx.ajax({
       url: config.service.getSucaiUrl + "?jointlyId=" + this.data.sucaiListId + "&pageNumber=" + this.data.page + "&pageSize=6",
       success: (res) => {
         this.setData({
-          sucai: this.data.sucai.concat(res.data.data),
+          sucai: this.data.sucai.concat(res.data),
         })
         wx.hideLoading()
       }
@@ -267,12 +267,14 @@ Page({
         }
       })
     } else {
+      console.log(e.currentTarget.dataset.dragize)
       this.data.imgUrl[this.data.imgIndex].props.push({
         url: e.currentTarget.dataset.url,
         id: e.currentTarget.dataset.id,
-        type: e.currentTarget.dataset.type,
+        dragize: e.currentTarget.dataset.dragize,
         width: e.currentTarget.dataset.width,
         height: e.currentTarget.dataset.height,
+        price: e.currentTarget.dataset.price,
         top: 0,
         left: 0,
         scale: 1,
@@ -293,6 +295,11 @@ Page({
     this.data.imgUrl[this.data.imgIndex].props.splice(e.currentTarget.dataset.index, 1)
     this.setData({
       images: this.data.imgUrl[this.data.imgIndex].props
+    })
+  },
+  test(){
+    this.setData({
+      iconIndex: -1
     })
   },
   ////图标移动开始事件
@@ -336,13 +343,13 @@ Page({
   },
   //图标缩放，旋转开始
   scaleStart(e) {
+    let p = 500/this.data.imgUrl[this.data.imgIndex].width;
+    x1 = ((125 + this.data.imgUrl[this.data.imgIndex].left * p + this.data.imgUrl[this.data.imgIndex].areaWidth / 2 * p) * this.data.p) + this.data.images[e.currentTarget.dataset.index].left;
+    y1 = ((102 + this.data.imgUrl[this.data.imgIndex].top * p + this.data.imgUrl[this.data.imgIndex].areaHeight / 2 * p) * this.data.p) + this.data.images[e.currentTarget.dataset.index].top;
 
-    let x = e.touches[0].clientX - ((125 + 175 + (e.currentTarget.dataset.type !== "BADGE" ? 75 : 25)) / 2) - this.data.images[e.currentTarget.dataset.index].left,
-      y = e.touches[0].clientY - ((102 + 258.5 + (e.currentTarget.dataset.type !== "BADGE" ? 75 : 25)) / 2) - this.data.images[e.currentTarget.dataset.index].top,
+    let x = e.touches[0].clientX - x1,
+      y = e.touches[0].clientY - y1,
       s = 0;
-    x1 = ((125 + 175 + (e.currentTarget.dataset.type !== "BADGE" ? 75 : 25)) / 2) + this.data.images[e.currentTarget.dataset.index].left;
-    y1 = ((102 + 258.5 + (e.currentTarget.dataset.type !== "BADGE" ? 75 : 25)) / 2) + this.data.images[e.currentTarget.dataset.index].top
-
     let cos = Math.abs(x) / Math.pow((Math.pow(x, 2) + Math.pow(y, 2)), 0.5);
     var radina = Math.acos(cos);
     var angle = Math.floor(180 / (Math.PI / radina));
@@ -357,8 +364,6 @@ Page({
         angle = 180 - angle
       }
     }
-
-
     this.setData({
       actionIndex: e.currentTarget.dataset.index,
       s: Math.pow((Math.pow(x, 2) + Math.pow(y, 2)), 0.5),
@@ -393,15 +398,10 @@ Page({
       var obj = {
 
       }
-      console.log(e.currentTarget.dataset.type)
-      if (e.currentTarget.dataset.type !== "BADGE") {
-        if (Math.abs(s / this.data.s - this.data.scale) >= 0.05) {
-          obj.scale = s / this.data.s.toFixed(2)
-        }
+      if (e.currentTarget.dataset.dragize !== 0) {
+        obj.scale = s / this.data.s.toFixed(2)
       }
-      if (Math.abs(this.data.deg1 - angle) >= 5) {
-        obj.rotate = parseInt(this.data.deg1 - angle)
-      }
+      obj.rotate = parseInt(this.data.deg1 - angle)
       this.setData(obj)
     }
   },
@@ -416,7 +416,6 @@ Page({
       rotate: 0,
       scale: 1,
     });
-    console.log(arr)
   },
   //文字切换颜色
   colorChange(e) {
@@ -442,7 +441,6 @@ Page({
     wx.chooseImage({
       count: 1,
       success: (res) => {
-        console.log(res)
         wx.uploadFile({
           url: config.service.uploadUrl,
           name: "img",
@@ -462,8 +460,8 @@ Page({
       var p = e.width / 500;
       e.props = e.props.map((e) => {
         delete e.position;
-        e.left = e.left / this.data.p * p;
-        e.top = e.top / this.data.p * p;
+        e.left = parseInt(e.left / this.data.p * p);
+        e.top = parseInt(e.top / this.data.p * p);
         if (e.type === "BADGE") {
           e.width = parseInt(50 * p);
           e.height = parseInt(50 * p)
@@ -475,7 +473,6 @@ Page({
       })
       return e
     })
-    console.log(res)
     var req = {
       drawBoardid: Number(this.data.query.id),
       propid: JSON.stringify({
@@ -486,15 +483,20 @@ Page({
       props: JSON.stringify(res)
     }
     console.log(req)
-    wx.request({
+    wx.ajax({
       url: config.service.createOrderUrl,
       data: req,
       method: "POST",
       success: (res) => {
-        console.log(res.data.data.order_id)
-        wx.navigateTo({
-          url: '/pages/detail/detail?id=' + res.data.data.order_id,
-        })
+        console.log(res)
+        if (res.data.order_id){
+          wx.navigateTo({
+            url: '/pages/detail/detail?id=' + res.data.order_id,
+          })
+        }
+      },
+      fail:()=>{
+        console.log("失败")
       }
     })
   }

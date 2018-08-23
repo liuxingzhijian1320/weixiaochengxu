@@ -18,16 +18,16 @@
   <image wx:for="{{images}}" class='icons_img' src='{{item.url}}?x-oss-process=image/resize,m_lfit,w_100' wx:key="index"></image>
 </view>
 <view class="cent">
-  <image src="{{imgUrl[imgIndex].bgUrl+'?x-oss-process=image/resize,m_lfit,w_500'}}" class="image" wx:if="{{imgUrl.length}}"></image>
+  <image catchtap='test' src="{{imgUrl[imgIndex].bgUrl+'?x-oss-process=image/resize,m_lfit,w_500'}}" class="image" wx:if="{{imgUrl.length}}"></image>
   <view class='btns'>
     <text wx:for="{{imgUrl}}" class='{{imgIndex===index?"active":null}}' data-index="{{index}}" wx:key="{{index}}" bindtap='changeImg'>{{item.desc}}</text>
   </view>
-  <view class="port" style='width:{{imgUrl[imgIndex].areaWidth*500/imgUrl[imgIndex].width}}rpx;height:{{imgUrl[imgIndex].areaHeight/imgUrl[imgIndex].width*500}}rpx;left:{{imgUrl[imgIndex].left/imgUrl[imgIndex].width*500+125}}rpx;top:{{imgUrl[imgIndex].top/imgUrl[imgIndex].width*500}}rpx'>
-    <view wx:for="{{images}}" wx:key="{{index}}" class='box {{index==iconIndex?"active":""}}' style='transform:translateX({{(item.left+item.position.left)/p}}rpx) translateY({{(item.top+item.position.top)/p}}rpx) rotateZ({{actionIndex==index?item.rotate+rotate:item.rotate}}deg) scale({{actionIndex==index?item.scale*scale:item.scale}}); left:{{imgUrl[imgIndex].areaWidth*500/imgUrl[imgIndex].width/2-(item.type==="BADGE"?25:75)}}rpx;top:{{imgUrl[imgIndex].areaHeight/imgUrl[imgIndex].width*500/2-(item.type==="BADGE"?25:75)}}rpx'
+  <view class="port" catchtap='test' style='width:{{imgUrl[imgIndex].areaWidth*500/imgUrl[imgIndex].width}}rpx;height:{{imgUrl[imgIndex].areaHeight/imgUrl[imgIndex].width*500}}rpx;left:{{imgUrl[imgIndex].left/imgUrl[imgIndex].width*500+125}}rpx;top:{{imgUrl[imgIndex].top/imgUrl[imgIndex].width*500}}rpx'>
+    <view wx:for="{{images}}" wx:key="{{index}}" class='box {{index==iconIndex?"active":""}}' style='transform:translateX({{(item.left+item.position.left)/p}}rpx) translateY({{(item.top+item.position.top)/p}}rpx) rotateZ({{actionIndex==index?item.rotate+rotate:item.rotate}}deg) scale({{actionIndex==index?item.scale*scale:item.scale}}); left:{{imgUrl[imgIndex].areaWidth*500/imgUrl[imgIndex].width/2-(item.dragize==1?75:25)}}rpx;top:{{imgUrl[imgIndex].areaHeight/imgUrl[imgIndex].width*500/2-(item.dragize===1?75:25)}}rpx'
       data-index='{{index}}'>
-      <image class='boxImg {{item.type}}' bindtouchstart='start' catchtouchend='end' catchtouchmove="move" data-index="{{index}}" src='{{item.url}}?x-oss-process=image/resize,m_lfit,w_100'></image>
+      <image class='boxImg {{item.dragize==1?"":"BADGE"}}' catchtouchstart='start' catchtouchend='end' catchtouchmove="move" data-index="{{index}}" src='{{item.url}}?x-oss-process=image/resize,m_lfit,w_100'></image>
       <view class='moveclose' style='transform:scale({{1/(actionIndex==index?item.scale*scale:item.scale)}})' hidden='{{index!=iconIndex}}' catchtap='moveclose' catchtouchmove data-index="{{index}}"></view>
-      <view class='movescale' style='transform:scale({{1/(actionIndex==index?item.scale*scale:item.scale)}})' hidden='{{index!=iconIndex}}' data-type='{{item.type}}' catchtouchmove="scaleMove" catchtouchstart="scaleStart" catchtouchend='scaleEnd' data-index='{{index}}'></view>
+      <view class='movescale' style='transform:scale({{1/(actionIndex==index?item.scale*scale:item.scale)}})' hidden='{{index!=iconIndex}}' data-dragize='{{item.dragize}}' catchtouchmove="scaleMove" catchtouchstart="scaleStart" catchtouchend='scaleEnd' data-index='{{index}}'></view>
     </view>
   </view>
 </view>
@@ -67,7 +67,7 @@
       <view wx:for="{{sucaiList}}" class='navList {{sucaiListId===item.jointlyId?"active":""}}' wx:key="{{index}}" data-id="{{item.jointlyId}}" bindtap='getsucai' data-index="{{index}}">{{item.jointlyName}}</view>
     </scroll-view>
     <scroll-view class='list' scroll-left="{{scrollLeft}}" scroll-x="{{true}}" bindscrolltolower="load">
-      <view wx:for="{{sucai}}" class='navList' wx:key="{{index}}" data-id="{{item.jointlyId}}" data-url="{{item.imgUrl}}" data-index="{{index}}" bindtap='addImg' data-type='{{item.categoryType}}' data-width="{{item.width}}"  data-height="{{item.height}}" >
+      <view wx:for="{{sucai}}" class='navList' wx:key="{{index}}" data-id="{{item.jointlyId}}" data-url="{{item.imgUrl}}" data-index="{{index}}" bindtap='addImg' data-price="{{item.price}}" data-dragize='{{item.dragize}}'>
         <image class="sucaiIcon" src='{{item.imgUrl}}?x-oss-process=image/resize,m_lfit,w_100'></image>
         <text>{{item.materialName}}</text>
       </view>
@@ -83,7 +83,7 @@
       <view wx:for="{{sucaiList}}" class='navList {{sucaiListId===item.jointlyId?"active":""}}' wx:key="{{index}}" data-id="{{item.jointlyId}}" bindtap='getsucai' data-index="{{index}}">{{item.jointlyName}}</view>
     </scroll-view>
     <scroll-view class='list' scroll-left="{{scrollLeft}}" scroll-x="{{true}}" bindscrolltolower="load">
-      <view wx:for="{{sucai}}" class='navList' wx:key="{{index}}" data-id="{{item.jointlyId}}" data-index="{{index}}" data-url="{{item.imgUrl}}" bindtap='addImg' data-type='{{item.categoryType}}'  data-width="{{item.width}}"  data-height="{{item.height}}" >
+      <view wx:for="{{sucai}}" class='navList' wx:key="{{index}}" data-id="{{item.jointlyId}}" data-index="{{index}}" data-url="{{item.imgUrl}}" bindtap='addImg' data-price="{{item.price}}" data-dragize='{{item.dragize}}'>
         <image class="sucaiIcon" src='{{item.imgUrl}}?x-oss-process=image/resize,m_lfit,w_100'></image>
         <text class='huizhang'>+{{item.price}}元</text>
       </view>
@@ -99,7 +99,7 @@
       <view wx:for="{{sucaiList}}" class='navList {{sucaiListId===item.jointlyId?"active":""}}' wx:key="{{index}}" data-id="{{item.jointlyId}}" bindtap='getsucai' data-index="{{index}}">{{item.jointlyName}}</view>
     </scroll-view>
     <scroll-view class='list' scroll-left="{{scrollLeft}}" scroll-x="{{true}}" bindscrolltolower="load">
-      <view wx:for="{{sucai}}" class='navList' wx:key="{{index}}" data-id="{{item.jointlyId}}" data-index="{{index}}" data-url="{{item.imgUrl}}" bindtap='addImg' data-type='{{item.categoryType}}' data-width="{{item.width}}"  data-height="{{item.height}}" >
+      <view wx:for="{{sucai}}" class='navList' wx:key="{{index}}" data-id="{{item.jointlyId}}" data-index="{{index}}" data-url="{{item.imgUrl}}" bindtap='addImg' data-price="{{item.price}}" data-dragize='{{item.dragize}}'>
         <image class="sucaiIcon" src='{{item.imgUrl}}?x-oss-process=image/resize,m_lfit,w_100'></image>
         <text>{{item.materialName}}</text>
       </view>

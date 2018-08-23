@@ -18,22 +18,26 @@
   background-size: 80rpx 80rpx;
   background-position: center;
 }
+
 .list {
   width: 600rpx;
   height: 100%;
   background: #eee;
 }
+
 /* pages/home/images/moddle.wxss */
- .made{
+
+.made {
   display: block;
   width: 160rpx;
   background-color: yellow;
   line-height: 40rpx;
-  margin:0 auto;
+  margin: 0 auto;
   border-radius: 20rpx;
   margin-top: 10rpx;
 }
- .box {
+
+.box {
   width: 270rpx;
   margin: 20rpx 0 0 20rpx;
   box-sizing: border-box;
@@ -41,14 +45,15 @@
   background: #fff;
   text-align: center;
 }
- .listImg {
+
+.listImg {
   width: 230rpx;
   height: 300rpx;
   display: block;
   margin: 0 auto;
 }
 
- .text {
+.text {
   text-align: center;
   line-height: 30rpx;
   /* margin: 0 20rpx; */
@@ -87,11 +92,17 @@
   border-bottom: 1px solid #ccc;
 }
 
+.popup .prop .right {
+  width:350rpx;
+  overflow-x: auto;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
 .popup .prop .text {
   line-height: 30rpx;
   padding: 20rpx;
   display: inline-block;
-  margin-top: 20rpx;
 }
 
 .popup .prop view {

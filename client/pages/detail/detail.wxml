@@ -1,8 +1,89 @@
 <!--pages/detail/detail.wxml-->
+<wxs module="foo">
+  var getPropName = function(id, arr) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i].id === id) {
+        return arr[i].name
+      }
+    }
+  };
+  var getPropIndex=function(id, arr) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i].id === id) {
+        return i
+      }
+    }
+  };
+  var getPropArr = function(id, arr) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i].propNameId === id) {
+        return arr[i].prop
+      }
+    }
+  }
+  module.exports = {
+    getPropName: getPropName,
+    getPropArr: getPropArr
+  }
+</wxs>
 <swiper class='swiper' indicator-dots indicator-color="#ccc" autoplay indicator-active-color="yellow">
   <block wx:for="{{orderInfo.props}}" wx:key="{{index}}">
     <swiper-item>
-      <image src="{{item.bgUrl}}" class="slide-image"/>
+      <image src="{{item.bgUrl}}?x-oss-process=image/resize,m_lfit,w_500" mode='aspectFit' class="slide-image" />
     </swiper-item>
   </block>
 </swiper>
+<view class='content'>
+  <view class='title'>基础信息</view>
+  <view wx:for="{{orderInfo.list}}" wx:key="{{index}}" class='clearfix list'>
+    <view class='fl left'>
+      <image src="{{orderInfo.drawBoard.imgUrl}}" mode='aspectFit'></image>
+    </view>
+    <view class='fl center'>
+      <view class='name'>{{orderInfo.drawBoard.name}}</view>
+
+      <picker mode="selector" range="{{foo.getPropArr(1,orderInfo.drawBoard.size)}}" range-key="name" value="{{foo.getPropIndex(item.size_id,foo.getPropArr(2,orderInfo.drawBoard.size))}}" bindchange="propChange" data-index="{{index}}" data-propid="{{1}}">
+        <view class='prop'>颜色类别：{{foo.getPropName(item.color_id,foo.getPropArr(1,orderInfo.drawBoard.size))}} (可选)</view>
+      </picker>
+      <picker mode="selector" range="{{foo.getPropArr(2,orderInfo.drawBoard.size)}}" range-key="name" value="{{foo.getPropIndex(item.size_id,foo.getPropArr(2,orderInfo.drawBoard.size))}}" bindchange="propChange" data-index="{{index}}" data-propid="{{2}}">
+        <view class='prop'>尺寸：{{foo.getPropName(item.size_id,foo.getPropArr(2,orderInfo.drawBoard.size))}} (可选)</view>
+      </picker>
+
+      <view class='price'>
+        <text>￥{{orderInfo.drawBoard.price*item.num}}</text>
+        <view class='fr num clearfix'>
+          <view class='fl btn' data-index="{{index}}" catchtap='numReduce'>-</view>
+          <view class='fl text'>{{item.num}}</view>
+          <view class='fl btn' data-index="{{index}}" catchtap='numAdd'>+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='add clearfix'>
+    <view class='fl title1'>同款不同尺码</view>
+    <view class='fr num clearfix'>
+      <view class='fr btn' catchtap='add'>+</view>
+      <view class='fr text'>{{orderInfo.list.length-1}}</view>
+      <view class='fr btn' catchtap='reduce' hidden='{{orderInfo.list.length===1}}'>-</view>
+    </view>
+  </view>
+  <view class='detail'>
+    <view class="title2">
+      <text class='fr'>共{{}}件商品</text>
+      <text>定制清单</text>
+    </view>
+    <view wx:for="{{list}}" class='detail_list' wx:key="{{index}}">
+      <image src="{{item.url}}?x-oss-process=image/resize,m_lfit,w_100" class='img'></image>
+      <text class='text'>{{item.name}} X {{item.num*orderInfo.list.length}}</text>
+      <text class='text'>￥{{item.price*item.num*orderInfo.list.length}}</text>
+    </view>
+    <view class='money'>
+      合计：￥{{money*orderInfo.list.length}}
+    </view>
+  </view>
+</view>
+
+<view class='footer'>
+  <view class='money fl'>合计金额：￥{{(orderInfo.drawBoard.price+money)*orderInfo.list.length}}</view>
+  <view class="btn fl" catchtap='confirm'>确认订单</view>
+</view>

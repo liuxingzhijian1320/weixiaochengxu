@@ -28,7 +28,7 @@
   width: 150rpx;
   height:150rpx;
   box-sizing: border-box;
-  display: block
+  display: block;
 }
 .port .box .boxImg.BADGE{
   width: 50rpx;

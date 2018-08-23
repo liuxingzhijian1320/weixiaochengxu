@@ -1,0 +1,113 @@
+/* pages/confirm/confirm.wxss */
+.confirm{
+  background: #eee;
+}
+.title{
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  background: #f90;
+}
+
+.title image{
+  width:50rpx;
+  height:50rpx;
+  margin-right: 15rpx;
+  vertical-align: middle
+}
+.ad{
+  display: block;
+  width: 750rpx;
+}
+.address{
+  height:200rpx;
+  background: #eee;
+  text-align: center;
+}
+.address .left{
+  width:200rpx;
+  height:200rpx;
+  background: #ccc;
+  font-size: 30rpx;
+  line-height: 200rpx;
+}
+.address .right{
+  height:200rpx;
+  width:550rpx;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  padding: 25rpx;
+  text-align: left;
+  line-height: 40rpx;
+  background: #fff;
+}
+.address .right .userName,.address .right .tel{
+  display: inline-block;
+  width:50%
+}
+.address .btn{
+  background: #f90;
+  width: 300rpx;
+  margin: 80rpx auto;
+}
+.prop{
+  background: #fff;
+  font-size: 26rpx;
+}
+.prop .list{
+  padding:15rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center
+}
+.footer .money{
+  background: #000;
+  height: 100rpx;
+  color:#fff;
+  width:450rpx;
+  
+}
+.footer .btn{
+  background: yellow;
+  width:300rpx;
+}
+.moddel{
+  position: fixed;
+  top:400rpx;
+  left: 100rpx;
+  width:550rpx;
+  text-align: center;
+  font-size: 30rpx;
+  border-radius: 20rpx;
+  z-index: 10000;
+  overflow: hidden
+}
+.moddel .title1{
+  background: #ccc;
+  line-height: 80rpx;
+}
+.moddel .message{
+  background: #fff;
+  line-height: 100rpx;
+}
+.moddel .btn{
+  background: #f90;
+  line-height: 80rpx;
+  display: block;
+  border-radius:0;
+}
+.box{
+  width: 100%;
+  height:100%;
+  background: rgba(0,0,0,.3);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 9999;
+}
